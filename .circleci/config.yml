@@ -17,7 +17,8 @@ jobs:
           echo "source ./env/bin/activate" >> $BASH_ENV
       - run:
         name: Install Dependencies 
-        command: pip3 install -r requirements.txt 
+        command: |
+        pip3 install -r requirements.txt --no-cache-dir 
       - run: 
           name: Run tests
           command: python -m pytest
