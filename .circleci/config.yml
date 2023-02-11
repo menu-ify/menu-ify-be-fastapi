@@ -11,11 +11,14 @@ jobs:
       - python/install-packages:
           pkg-manager: pip
       - run:
-      #     name: Setup Virtual env 
-      #     command: | 
-      #     python3 -m venv env
-      #     echo "source ./env/bin/activate" >> $BASH_ENV
-      # - run:
+          name: Setup Virtual Env 
+          command: | 
+          python3 -m venv env
+          echo "source ./env/bin/activate" >> $BASH_ENV
+      - run:
+        name: Install Dependencies 
+        command: pip3 install -r requirements.txt 
+      - run: 
           name: Run tests
           command: python -m pytest
       - persist_to_workspace:
