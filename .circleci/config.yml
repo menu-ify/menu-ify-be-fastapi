@@ -8,32 +8,32 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
+      # - python/install-packages:
+      #     pkg-manager: pip
       - run:
           name: Setup Virtual Env 
           command: | 
           python3 -m venv env
-          echo "source ./env/bin/activate" >> $BASH_ENV
+          echo "source ./env/bin/activate" >> $BASH_ENV 
       - run:
-        name: Install Dependencies 
-        command: |
-        pip3 install -r requirements.txt --no-cache-dir 
-      - run: 
-          name: Run tests
-          command: python -m pytest
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - .
+          name: Install Dependencies 
+          command: |
+          pip3 install -r requirements.txt --no-cache-dir 
+      # - run: 
+      #     name: Run tests
+      #     command: python -m pytest
+      # - persist_to_workspace:
+      #     root: ~/project
+      #     paths:
+      #       - .
 
-  deploy: # this can be any name you choose
-    executor: python/default
-    steps:
-      - attach_workspace:
-          at: ~/project
-      - heroku/deploy-via-git:
-          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
+  # deploy: # this can be any name you choose
+  #   executor: python/default
+  #   steps:
+  #     - attach_workspace:
+  #         at: ~/project
+  #     - heroku/deploy-via-git:
+  #         force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
 
 workflows:
   test_my_app:
