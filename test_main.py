@@ -5,6 +5,6 @@ from main import app
 client = TestClient(app)
 
 
-def test_main(keyword = 'cheese'): 
-  response = client.get("/photos/{keyword}")
+def test_main(): 
+  response = client.get("/photos/cheese")
   assert response.status_code == 200 
