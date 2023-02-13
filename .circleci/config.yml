@@ -12,12 +12,10 @@ jobs:
       - checkout
       - run:
           name: Setup Virtual env
-          command: |  
-            python3 -m venv env
-            source . env/bin/activate
-      - run:
-          name: Install Dependencies
-          command: pip3 install -r requirements.txt
+          command: pip3 install -r requirements.txt && source env/bin/activate
+      # - run:
+      #     name: Install Dependencies
+      #     command: pip3 install -r requirements.txt
       - run:
           name: Test
           command: pytest
