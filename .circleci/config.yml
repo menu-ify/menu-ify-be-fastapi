@@ -12,13 +12,13 @@ jobs:
       - checkout
       - run:
           name: Setup Virtual env
-          command: pip3 install -r requirements.txt && source env/bin/activate
+          command: pip3 install -r requirements.txt && source env/bin/activate && pytest
       # - run:
       #     name: Install Dependencies
       #     command: pip3 install -r requirements.txt
-      - run:
-          name: Test
-          command: pytest
+      # - run:
+      #     name: Test
+      #     command: pytest
     
 workflows:  
   build-test-and-deploy:    
