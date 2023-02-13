@@ -18,7 +18,7 @@ jobs:
       #     command: pip3 install -r requirements.txt
       - run:
           name: Test
-          command: . env/bin/activate && pytest
+          command: source env/bin/activate && pytest
     
 workflows:  
   build-test-and-deploy:    
