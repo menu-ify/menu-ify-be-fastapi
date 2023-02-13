@@ -12,12 +12,13 @@ jobs:
       - checkout
       - run:
           name: Setup Virtual env
-          command: |            
+          command: |  
+            pip3 install virtualenv          
             python3 -m venv env
-            echo "source ./env/bin/activate" >> $BASH_ENV
+            echo "source env/bin/activate" >> $BASH_ENV
       - run:
           name: Install Dependencies
-          command: pip install -r requirements.txt
+          command: pip3 install -r requirements.txt
       - run:
           name: Test
           command: pytest
