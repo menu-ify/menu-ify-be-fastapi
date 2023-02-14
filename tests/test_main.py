@@ -8,12 +8,12 @@ def test_read_main_response():
     assert response.status_code == 200
     assert "results" in response.json()
 
-def test_no_photos_found():
+def test_read_no_photos_found():
     response = client.get("/photos/asdfjklqweruiop")
     assert response.status_code == 200
     assert response.json() == {"message": "No photos found"}
 
-def test_blank_query_param():
+def test_read_blank_query_param():
     response = client.get("/photos/ ")
     assert response.status_code == 200
     assert response.json() == {"message": "No photos found"}
