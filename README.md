@@ -1,15 +1,15 @@
-# menu-ify-be-fastapi
 <div align="center">
   <h1>Menu-ify Photo API</h1>
-
+  <div align="center"><img src="images/food_photo.jpeg" alt="Deschutes Brewery GIF" class="center" width="480" height="320"></div>
 </div>
 
 <br>
 
 # Project Overview
 
-Menu-ify is an application created by students of [Turing School of Software and Design](https://turing.edu/). This is one of two microservices. This micro-service utilizes external api calls to produce images that will be used on our front-end application. 
-[Our other back-end repo containing the database](https://github.com/menu-ify/menu-ify-rails-be).
+Menu-ify is an application created by students of [Turing School of Software and Design](https://turing.edu/). This is one of two microservices. This micro-service utilizes external api calls to produce images that will be used on our front-end application. <br>
+[Our other back-end repo containing the database](https://github.com/menu-ify/menu-ify-rails-be)<br>
+[Menu-ify front end Application](https://github.com/menu-ify/menu-ify-fe)
 
 
 # Learning Goals
@@ -26,6 +26,21 @@ Menu-ify is an application created by students of [Turing School of Software and
 
 ## Developer Setup
   1. Make sure to have [Python](https://www.python.org/downloads/) Locally.
+  2. In Terminal Run ```pip3 install -r requirements.txt ```
+  3. If you would like to run the tests. Results will show in the terminal.
+
+  ``` 
+    coverage run -m pytest
+    coverage report -m 
+  ```
+  To see a coverage report within your browser then run.
+
+  ```
+    coverage html 
+    open htmlcov/index.html
+  ```
+    
+
 
 
 <br>
@@ -44,9 +59,11 @@ Menu-ify is an application created by students of [Turing School of Software and
 <br>
 
 # Endpoints
+Request: <br>
 ```
- /photos/{food search term}
+ GET /photos/{food_search_term}
 ```
+JSON Response Example:
 ```
  {
     "results":
