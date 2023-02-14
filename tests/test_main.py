@@ -12,3 +12,8 @@ def test_no_photos_found():
     response = client.get("/photos/asdfjklqweruiop")
     assert response.status_code == 200
     assert response.json() == {"message": "No photos found"}
+
+def test_blank_query_param():
+    response = client.get("/photos/ ")
+    assert response.status_code == 200
+    assert response.json() == {"message": "No photos found"}
