@@ -5,8 +5,10 @@ client = TestClient(app)
 
 def test_read_main_response():
     response = client.get("/photos/bacon")
+    photo_list = response.json()["results"]
     assert response.status_code == 200
     assert "results" in response.json()
+    assert len(photo_list) == 10
 
 def test_read_no_photos_found():
     response = client.get("/photos/asdfjklqweruiop")
