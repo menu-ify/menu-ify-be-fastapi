@@ -13,9 +13,6 @@ jobs:
       - run:
           name: Setup Virtual env
           command: pip3 install -r requirements.txt && source env/bin/activate 
-      # - run:
-      #     name: Install Dependencies
-      #     command: pip3 install -r requirements.txt
       - run:
           name: Test
           command: source env/bin/activate && pytest
