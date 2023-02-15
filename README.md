@@ -5,6 +5,16 @@
 
 <br>
 
+# Table of Contents 
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Developer Setup](#developer-setup)
+- [Testing](#testing)
+- [Tech and Tools](#tech-and-tools)
+- [Endpoint](#endpoint)
+- [Contributers](#contributors)
+
+
 # Project Overview
 
 Menu-ify is an application created by students of [Turing School of Software and Design](https://turing.edu/). This is one of two microservices. This micro-service utilizes external api calls to produce images that will be used on our front-end application. <br>
@@ -14,7 +24,7 @@ Menu-ify is an application created by students of [Turing School of Software and
 
 # Learning Goals
 
-- Utilize Agile methodologies to ensure deployment of MVP
+- Utilize Agile methodologies, Service Oriented Architecture, and Microservices to ensure deployment of RESTful API with MVP
 
 - Develop quality communication between front-end and back-end teams, which include daily stand-ups, weekly retros and an evolving process to achieve higher communication standards
 
@@ -24,10 +34,21 @@ Menu-ify is an application created by students of [Turing School of Software and
 
 
 
-## Developer Setup
+# Developer Setup
   1. Make sure to have [Python](https://www.python.org/downloads/) Locally.
-  2. In Terminal Run ```pip3 install -r requirements.txt ```
-  3. If you would like to run the tests. Results will show in the terminal.
+  2. Clone the repository 
+  3. ```cd``` into the root directory 
+  4. Create virtual environment ```python3 -m venv env``` if not created 
+  5. Activate virtual environment ```source ./env/bin/activate```
+  6. Sign up for the free Unsplash photo API https://unsplash.com/developers add Menu-ify under [Your apps](https://unsplash.com/oauth/applications). Scroll down to find your Access key 
+  7. Create a new file called ```.env``` in root directory and add your secret key as an api_key i.e. ```api_key=123445566```
+  8. To install requirements run: ```pip3 install -r requirements.txt ```
+  9. To view endpoints locally run: ```uvicorn main:app --reload``` and navigate to url listed in terminal i.e. ```http://127.0.0.1:8000```
+  10. You can view the interactive docs by adding ```/docs``` to the url in step 5 
+
+
+# Testing 
+  To run the tests using Pytest, run the following commands. Results will show in the terminal. 
 
   ``` 
     coverage run -m pytest
@@ -46,11 +67,11 @@ Menu-ify is an application created by students of [Turing School of Software and
 <br>
 
 # Tech and Tools
-
-## Built With
 - [Python 3.11.1](https://www.python.org/downloads/)
 - [FastAPI](https://fastapi.tiangolo.com/) 
 - [Heroku](https://www.heroku.com/what)
+- [CircleCI](https://circleci.com/)
+- [Pytest](https://docs.pytest.org/en/7.2.x/)
 
 
 
@@ -58,7 +79,18 @@ Menu-ify is an application created by students of [Turing School of Software and
 
 <br>
 
-# Endpoints
+# Endpoint
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/24609974-41a1d2d6-5aa8-49d2-b086-76627d6839d3?action=collection%2Ffork&collection-url=entityId%3D24609974-41a1d2d6-5aa8-49d2-b086-76627d6839d3%26entityType%3Dcollection%26workspaceId%3D2902cec5-b68c-4ae7-a836-ede59d44bd2d#?env%5Bturing%20postman%5D=W3sia2V5IjoiZWNob1VSTCIsInZhbHVlIjoiaHR0cHM6Ly9wb3N0bWFuLWVjaG8uY29tIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifSx7ImtleSI6InNwb3RpZnlVUkwiLCJ2YWx1ZSI6Imh0dHBzOi8vcG9zdG1hbi1zcG90aWZ5LWdyYXBocWwuaGVyb2t1YXBwLmNvbSIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJkZWZhdWx0In1d)
+
+- Interactive docs can be found here: https://menu-ify-fastapi.herokuapp.com/docs
+
+- Deployed Backend Server: https://menu-ify-fastapi.herokuapp.com
+
+- Local Backend Server: http://127.0.0.1:8000
+
+- Example: Returns an array with 10 links for cheese photos. https://menu-ify-fastapi.herokuapp.com/photos/cheese
+
 Request: <br>
 ```
  GET /photos/{food_search_term}
@@ -70,7 +102,9 @@ JSON Response Example:
     [
       "photo_url",
       "photo_url",
-      "photo_url"
+      "photo_url",
+      "...",
+      "..."
     ]
  }
 ```
