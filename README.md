@@ -17,9 +17,11 @@
 
 # Project Overview
 
-Menu-ify is an application created by students of [Turing School of Software and Design](https://turing.edu/). This is one of two microservices. This micro-service utilizes external api calls to produce images that will be used on our front-end application. <br>
-[Our other back-end repo containing the database](https://github.com/menu-ify/menu-ify-rails-be)<br>
-[Menu-ify front end Application](https://github.com/menu-ify/menu-ify-fe)
+Menu-ify is a full stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menu-ify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. This repo is one of two REST API microservices created for the Frontend to implement. This REST API utilizes the [Unsplash Photo Search API](https://unsplash.com/documentation#search-photos) and returns 10 images for the keyword searched. 
+
+<br>
+- [Our other back-end repo containing the database](https://github.com/menu-ify/menu-ify-rails-be)<br>
+- [Frontend Repo](https://github.com/menu-ify/menu-ify-fe)
 
 
 # Learning Goals
@@ -38,7 +40,7 @@ Menu-ify is an application created by students of [Turing School of Software and
   1. Make sure to have [Python](https://www.python.org/downloads/) Locally.
   2. Clone the repository 
   3. ```cd``` into the root directory 
-  4. Create virtual environment ```python3 -m venv env``` if not created 
+  4. Create virtual environment ```python3 -m venv env```  
   5. Activate virtual environment ```source ./env/bin/activate```
   6. Sign up for the free Unsplash photo API https://unsplash.com/developers add Menu-ify under [Your apps](https://unsplash.com/oauth/applications). Scroll down to find your Access key 
   7. Create a new file called ```.env``` in root directory and add your secret key as an api_key i.e. ```api_key=123445566```
