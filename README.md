@@ -99,9 +99,10 @@ Menu-ify is a full-stack application created by Backend and Frontend students of
 
 - Example: Returns an array with 10 links for cheese photos. https://menu-ify-fastapi.herokuapp.com/photos/cheese
 
-Request: <br>
+## Request <br>
+Returns 10 photo links to photos of the ```keyword``` entered in the request  
 ```
- GET /photos/{food_search_term}
+ GET /photos/{keyword}
 ```
 JSON Response Example:
 ```
