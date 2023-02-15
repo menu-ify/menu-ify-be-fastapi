@@ -23,6 +23,7 @@ Menu-ify is a full-stack application created by Backend and Frontend students of
 
 - [Rails Backend Repo](https://github.com/menu-ify/menu-ify-rails-be) - this repo holds our database and CRUD functionality<br>
 - [Frontend Repo](https://github.com/menu-ify/menu-ify-fe)
+- [Deployed App](https://menu-ify.vercel.app/)
 
 
 # Learning Goals
