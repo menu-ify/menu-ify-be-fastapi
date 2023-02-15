@@ -31,6 +31,9 @@ def get_photos(keyword: str):
   photo_array = []
   for item in new_results:
     photo_array.append((item["urls"]["raw"]))
-  return {"results": photo_array }
+  if not photo_array:
+    return {"message": "No photos found"}
+  else:
+    return {"results": photo_array }
 
 
