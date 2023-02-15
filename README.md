@@ -17,22 +17,27 @@
 
 # Project Overview
 
-Menu-ify is a full stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menu-ify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. This repo is one of two REST API microservices created for the Frontend to implement. This REST API utilizes the [Unsplash Photo Search API](https://unsplash.com/documentation#search-photos) and returns 10 images for the keyword searched. 
+Menu-ify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menu-ify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. This repo is one of two REST API microservices created for the Frontend to implement. This REST API utilizes the [Unsplash Photo Search API](https://unsplash.com/documentation#search-photos) and returns 10 images for the keyword searched. 
 
 <br>
-- [Our other back-end repo containing the database](https://github.com/menu-ify/menu-ify-rails-be)<br>
+
+- [Rails Backend Repo](https://github.com/menu-ify/menu-ify-rails-be) - this repo holds our database and CRUD functionality<br>
 - [Frontend Repo](https://github.com/menu-ify/menu-ify-fe)
 
 
 # Learning Goals
 
-- Utilize Agile methodologies, Service Oriented Architecture, and Microservices to ensure deployment of RESTful API with MVP
+[Project Specs](https://mod4.turing.edu/projects/capstone/index.html)
 
-- Develop quality communication between front-end and back-end teams, which include daily stand-ups, weekly retros and an evolving process to achieve higher communication standards
+- Utilize Agile methodologies, Service Oriented Architecture, and Microservices to ensure deployment of a RESTful API with MVP
 
-- Create micro-services including a database and external API consumption to support application features for our end users
+- Develop quality communication between Frontend and Backend teams, including daily stand-ups, project retros, a project board, and a JSON contract
 
-- Learn new technologies and tools (Python with FastApi Framework). 
+- Gain experience using Continuous Integration tools to build and automate the deployment of features 
+
+- Create API microservices to support application features for our end users
+
+- Learn new technologies and tools (Python with FastApi Framework) 
 
 
 
