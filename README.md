@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Menu-ify Photo API</h1>
+  <h1>Menuify Photo API</h1>
   <div align="center"><img src="images/food_photo.jpeg" alt="Deschutes Brewery GIF" class="center" width="480" height="320"></div>
 </div>
 
@@ -17,7 +17,7 @@
 
 # Project Overview
 
-Menu-ify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menu-ify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. This repo is one of two REST API microservices created for the Frontend to implement. This REST API utilizes the [Unsplash Photo Search API](https://unsplash.com/documentation#search-photos) and returns 10 images for the keyword searched. 
+Menuify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menuify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. This repo is one of two REST API microservices created for the Frontend to implement. This REST API utilizes the [Unsplash Photo Search API](https://unsplash.com/documentation#search-photos) and returns 10 images for the keyword searched. 
 
 <br>
 
@@ -48,7 +48,7 @@ Menu-ify is a full-stack application created by Backend and Frontend students of
   3. ```cd``` into the root directory 
   4. Create virtual environment ```python3 -m venv env```  
   5. Activate virtual environment ```source ./env/bin/activate```
-  6. Sign up for the free Unsplash photo API https://unsplash.com/developers add Menu-ify under [Your apps](https://unsplash.com/oauth/applications). Scroll down to find your Access key 
+  6. Sign up for the free Unsplash photo API https://unsplash.com/developers add Menuify under [Your apps](https://unsplash.com/oauth/applications). Scroll down to find your Access key 
   7. Create a new file called ```.env``` in root directory and add your secret key as an api_key i.e. ```api_key=123445566```
   8. To install requirements run: ```pip3 install -r requirements.txt ```
   9. To view endpoints locally run: ```uvicorn main:app --reload``` and navigate to url listed in terminal i.e. ```http://127.0.0.1:8000```
