@@ -1,4 +1,4 @@
-#!/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-be/env/bin/python3.11
+#!/Users/gabrielnunez/turing_work/4mod/projects/menu-ify-be-fastapi/env/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
