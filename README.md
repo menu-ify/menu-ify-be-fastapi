@@ -5,7 +5,8 @@
 
 <br>
 
-# Table of Contents 
+# Table of Contents
+
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
 - [Developer Setup](#developer-setup)
@@ -14,17 +15,15 @@
 - [Endpoint](#endpoint)
 - [Contributers](#contributors)
 
-
 # Project Overview
 
-Menuify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menuify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. This repo is one of two REST API microservices created for the Frontend to implement. This REST API utilizes the [Unsplash Photo Search API](https://unsplash.com/documentation#search-photos) and returns 10 images for the keyword searched. 
+Menuify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menuify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. This repo is one of two REST API microservices created for the Frontend to implement. This REST API utilizes the [Unsplash Photo Search API](https://unsplash.com/documentation#search-photos) and returns 10 images for the keyword searched.
 
 <br>
 
 - [Rails Backend Repo](https://github.com/menu-ify/menu-ify-rails-be) - this repo holds our database and CRUD functionality<br>
 - [Frontend Repo](https://github.com/menu-ify/menu-ify-fe)
 - [Deployed App](https://menu-ify.vercel.app/)
-
 
 # Learning Goals
 
@@ -34,56 +33,50 @@ Menuify is a full-stack application created by Backend and Frontend students of 
 
 - Develop quality communication between Frontend and Backend teams, including daily stand-ups, project retros, a project board, and a JSON contract
 
-- Gain experience using Continuous Integration tools to build and automate the deployment of features 
+- Gain experience using Continuous Integration tools to build and automate the deployment of features
 
 - Create API microservices to support application features for our end users
 
-- Learn new technologies and tools (Python with FastApi Framework) 
-
-
+- Learn new technologies and tools (Python with FastApi Framework)
 
 # Developer Setup
-  1. Make sure to have [Python](https://www.python.org/downloads/) Locally.
-  2. Clone the repository 
-  3. ```cd``` into the root directory 
+
+  1. Make sure to have [Python 3.12.7](https://www.python.org/downloads/) locally.
+  2. Clone the repository
+  3. ```cd``` into the root directory
   4. Create virtual environment ```python3 -m venv env```  
   5. Activate virtual environment ```source ./env/bin/activate```
   6. Sign up for the free Unsplash photo API https://unsplash.com/developers add Menuify under [Your apps](https://unsplash.com/oauth/applications). Scroll down to find your Access key 
   7. Create a new file called ```.env``` in root directory and add your secret key as an api_key i.e. ```api_key=123445566```
   8. To install requirements run: ```pip3 install -r requirements.txt ```
   9. To view endpoints locally run: ```uvicorn main:app --reload``` and navigate to url listed in terminal i.e. ```http://127.0.0.1:8000```
-  10. You can view the interactive docs by adding ```/docs``` to the url in step 5 
+  10. You can view the interactive docs by adding ```/docs``` to the url in step 5
 
+# Testing
 
-# Testing 
-  To run the tests using Pytest, run the following commands. Results will show in the terminal. 
+  To run the tests using Pytest, run the following commands. Results will show in the terminal.
 
-  ``` 
+  ```Shell
     coverage run -m pytest
     coverage report -m 
   ```
+
   To see a coverage report within your browser then run.
 
-  ```
+  ```Shell
     coverage html 
     open htmlcov/index.html
   ```
-    
-
-
 
 <br>
 
 # Tech and Tools
-- [Python 3.11.1](https://www.python.org/downloads/)
-- [FastAPI](https://fastapi.tiangolo.com/) 
+
+- [Python 3.12.7](https://www.python.org/downloads/)
+- [FastAPI](https://fastapi.tiangolo.com/)
 - [Heroku](https://www.heroku.com/what)
 - [CircleCI](https://circleci.com/)
 - [Pytest](https://docs.pytest.org/en/7.2.x/)
-
-
-
-
 
 <br>
 
@@ -100,12 +93,16 @@ Menuify is a full-stack application created by Backend and Frontend students of 
 - Example: Returns an array with 10 links for cheese photos. https://menu-ify-fastapi.herokuapp.com/photos/cheese
 
 ## Request <br>
-Returns 10 photo links to photos of the ```keyword``` entered in the request  
-```
+
+Returns 10 photo links to photos of the ```keyword``` entered in the request
+
+```Text
  GET /photos/{keyword}
 ```
+
 JSON Response Example:
-```
+
+```JSON
  {
     "results":
     [
@@ -117,10 +114,6 @@ JSON Response Example:
     ]
  }
 ```
-
-
-    
-
 
 # Contributors
 
@@ -195,5 +188,3 @@ JSON Response Example:
 </table>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
